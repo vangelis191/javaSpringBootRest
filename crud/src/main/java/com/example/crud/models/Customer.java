@@ -28,6 +28,14 @@ public class Customer {
         this.phone = phone;
     }
 
+    public Customer(int customerId, String firstName, String lastName, String email, String phone) {
+        this.customerId = customerId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+    }
+
     public int getCustomerId() {
         return customerId;
     }
@@ -66,5 +74,17 @@ public class Customer {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerId=" + customerId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
     }
 }

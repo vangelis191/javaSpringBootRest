@@ -1,7 +1,7 @@
 package com.example.crud.controllers;
 
 import com.example.crud.models.Customer;
-import com.example.crud.services.CusotmerService;
+import com.example.crud.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,7 @@ public class CustomerController {
     public static int  number = 0;
 
     @Autowired
-    private CusotmerService service;
+    private CustomerService service;
 
     @GetMapping("/addCustomer")
     public ResponseEntity<Customer> addCustomer(){
@@ -27,6 +27,12 @@ public class CustomerController {
     @GetMapping("/cusotmer")
     public List<Customer> getCustomer(){
         return this.service.getCustomer();
+    }
+
+    @GetMapping("/hello")
+    public String hello(){
+
+        return "hello";
     }
 
 }

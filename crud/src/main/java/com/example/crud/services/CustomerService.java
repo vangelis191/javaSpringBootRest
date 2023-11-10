@@ -7,7 +7,7 @@ import com.example.crud.repository.Repository;
 import java.util.List;
 
 @Service
-public class CusotmerService {
+public class CustomerService {
     @Autowired
     private  Repository repository;
 
